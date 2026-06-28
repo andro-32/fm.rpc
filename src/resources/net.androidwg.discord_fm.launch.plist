@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>net.androidwg.discord_fm.launch</string>
+  <string>net.andro-32.discord_fm.launch</string>
   <key>LimitLoadToSessionType</key>
   <string>Aqua</string>
   <key>ProgramArguments</key>
   <array>
-    <string>~/Applications/Discord.fm.app/Contents/MacOS/Discord.fm</string>
+    <string>~/Applications/fm.rpc.app/Contents/MacOS/fm.rpc</string>
   </array>
   <key>StartInterval</key>
   <integer>3620</integer>

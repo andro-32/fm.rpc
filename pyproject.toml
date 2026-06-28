@@ -1,5 +1,5 @@
 [project]
-name = "Discord.fm"
+name = "fm.rpc"
 authors = [
   { name="Anna Rodrigues", email="me@annarodrigues.net" },
 ]
@@ -28,8 +28,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/androidWG/Discord.fm"
-Issues = "https://github.com/androidWG/Discord.fm/issues"
+Homepage = "https://github.com/andro-32/fm.rpc"
+Issues = "https://github.com/andro-32/fm.rpc/issues"
 
 [tool.uv]
 package = false

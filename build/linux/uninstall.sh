@@ -8,7 +8,7 @@ if [ "$(dirname "$(realpath "$0")")" != "$(realpath "$PWD")" ]; then
 fi
 
 if [[ $(pidof discord_fm) ]]; then
-  echo "Waiting for Discord.fm to finish running"
+  echo "Waiting for fm.rpc to finish running"
   tail --pid="$PID" -f /dev/null
 fi
 

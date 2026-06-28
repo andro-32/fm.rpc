@@ -36,9 +36,9 @@ coll = COLLECT(
 
 if platform.system() == "Darwin":
     app = BUNDLE(main_exe,
-                 name="Discord.fm.app",
+                 name="fm.rpc.app",
                  icon="build/macos/macos_icon.icns",
-                 bundle_identifier="net.androidwg.discord_fm",
+                 bundle_identifier="net.andro-32.discord_fm",
                  version=r"#VERSION#",
                  info_plist={
                      "CFBundleVersion": r"#VERSION#",

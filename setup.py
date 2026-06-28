@@ -27,7 +27,7 @@ class Colors:
 
 PYINSTALLER_VER = "6.11.1"
 PYTHON_FIND_CMD = "uv python find"
-TKINTER_MESSAGE = f"{Colors.FAIL}tkinter is required to build and run Discord.fm. Check instructions for your OS at https://stackoverflow.com/a/25905642{Colors.ENDC}"
+TKINTER_MESSAGE = f"{Colors.FAIL}tkinter is required to build and run fm.rpc. Check instructions for your OS at https://stackoverflow.com/a/25905642{Colors.ENDC}"
 
 
 def _delete(path: str | os.PathLike[str]) -> None:
@@ -210,7 +210,7 @@ class Setup:
             case "setup":
                 _print_header("Setup completed")
             case "build":
-                _print_header("Building Discord.fm")
+                _print_header("Building fm.rpc")
                 self._find_tools()
                 self._check_package(
                     "tkinter",
@@ -218,7 +218,7 @@ class Setup:
                 )
                 self._check_package(
                     "psutil",
-                    "psutil is required to build Discord.fm. Install using pip install psutil",
+                    "psutil is required to build fm.rpc. Install using pip install psutil",
                 )
 
                 _print_subheader("Checking other packages")
@@ -296,7 +296,7 @@ class Setup:
 if __name__ == "__main__":
     # region ArgumentParser Setup
     parser = argparse.ArgumentParser(
-        description="Setup and manage the Discord.fm project."
+        description="Setup and manage the fm.rpc project."
     )
     parser.add_argument(
         "--global",
@@ -314,16 +314,16 @@ if __name__ == "__main__":
 
     subparsers = parser.add_subparsers(help="Command to be executed", dest="command")
 
-    sub_run = subparsers.add_parser("run", help="Run Discord.fm")
+    sub_run = subparsers.add_parser("run", help="Run fm.rpc")
 
-    sub_test = subparsers.add_parser("test", help="Test Discord.fm using pytest")
+    sub_test = subparsers.add_parser("test", help="Test fm.rpc using pytest")
 
     sub_setup = subparsers.add_parser(
-        "setup", help="Setup Discord.fm development environment"
+        "setup", help="Setup fm.rpc development environment"
     )
 
     sub_build = subparsers.add_parser(
-        "build", help="Build Discord.fm distribution binaries"
+        "build", help="Build fm.rpc distribution binaries"
     )
     sub_build.add_argument(
         "-f", "--force", action="store_true", help="Force setup from scratch."

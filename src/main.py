@@ -17,15 +17,15 @@ if __name__ == "__main__":
 
     logger = logging.getLogger("discord_fm").getChild(__name__)
     logger.info(
-        f' -------- Discord.fm version {version.get_version()} {"(debug mode)" if manager.get_debug() else ""} -------- '
+        f' -------- fm.rpc version {version.get_version()} {"(debug mode)" if manager.get_debug() else ""} -------- '
     )
 
     logger.info(f'Current working path: "{abspath(os.curdir)}"')
 
     if platform.system() == "Darwin" and process.check_process_running(
-        "discord_fm", "discord.fm"
+        "discord_fm", "fm.rpc"
     ):
-        logger.info("Discord.fm is already running, opening settings...")
+        logger.info("fm.rpc is already running, opening settings...")
         manager.open_settings()
         sys.exit(2)
 

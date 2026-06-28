@@ -7,7 +7,7 @@ from datetime import datetime
 from build.base import BuildTool
 from build.flatpak import requirements
 
-APP_ID = "net.androidwg.discord_fm"
+APP_ID = "net.andro-32.discord_fm"
 
 
 class FlatpakBuildTool(BuildTool):

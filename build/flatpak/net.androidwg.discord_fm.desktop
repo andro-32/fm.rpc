@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=Discord.fm
+Name=fm.rpc
 Comment=Show what you're scrobbling on Discord
 GenericName=Last.fm
 Exec=discord_fm %f
 TryExec=discord_fm
-Icon=net.androidwg.discord_fm
+Icon=net.andro-32.discord_fm
 Categories=Utility;
 Terminal=false
 Type=Application

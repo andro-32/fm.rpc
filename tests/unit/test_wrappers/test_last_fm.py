@@ -9,7 +9,7 @@ from wrappers.last_fm_user import LastFMUser
 class TestLastFm(TestCase):
     data = pylast.Track("TestArtist", "TestTitle", None, "TestUsername")
     error = pylast.WSError(None, None, "User not found")
-    usernames = {"test": True, "TEST01": False, "andodide": True, "androidWG": False}
+    usernames = {"test": True, "TEST01": False, "andodide": True, "andro-32": False}
 
     def test_invalid_username(self):
         manager = MagicMock()

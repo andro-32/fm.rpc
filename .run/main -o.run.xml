@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="main -o" type="PythonConfigurationType" factoryName="Python">
-    <module name="Discord.fm" />
+    <module name="fm.rpc" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
     <envs>

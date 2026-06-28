@@ -32,7 +32,7 @@ class LinuxGenericBuildTool(build.base.PyInstallerBuildTool):
 
     def package(self):
         source_dir = "dist/discord_fm"
-        filename = Path(f"dist/discord.fm-generic-linux64-{self.version}.tar.gz")
+        filename = Path(f"dist/fm.rpc-generic-linux64-{self.version}.tar.gz")
 
         print("Copying additional files")
         shutil.copy("build/linux/install.sh", source_dir)

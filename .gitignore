@@ -203,7 +203,7 @@ build/settings_ui*/
 build_temp/
 .flatpak-builder/
 .pipcache/
-com.androidWG.Discordfm.*
+com.andro-32.fmrpc.*
 temp_requirements.txt
 dependencies.yaml
 Pipfile.lock

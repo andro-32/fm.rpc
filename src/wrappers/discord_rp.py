@@ -71,7 +71,7 @@ class DiscordRP:
                     end=int(time_remaining),
                     buttons=[{"label": "See on Last.fm", "url": track.url}],
                     large_image=track.cover,
-                    small_text="Powered by Discord.fm",
+                    small_text="Powered by fm.rpc",
                     small_image="lastfm",
                 )
             else:
@@ -81,6 +81,6 @@ class DiscordRP:
                     state=artist,
                     buttons=[{"label": "See on Last.fm", "url": track.url}],
                     large_image=track.cover,
-                    small_text="Powered by Discord.fm",
+                    small_text="Powered by fm.rpc",
                     small_image="lastfm",
                 )

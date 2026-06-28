@@ -8,7 +8,7 @@ from util import updates
 
 class TestUpdates(unittest.TestCase):
     asset = {
-        "name": "discordfm-setup-win.exe",
+        "name": "fmrpc-setup-win.exe",
         "content_type": "application/x-msdownload",
     }
     asset2 = {"name": "test2.txt", "content_type": "test"}

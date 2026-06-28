@@ -11,7 +11,7 @@ from util.install import BaseInstall
 SERVICE_ABS_PATH = (
     Path("~/.config/systemd/user/discord_fm.service").expanduser().absolute()
 )
-APP_ID = "net.androidwg.discord_fm"
+APP_ID = "net.andro-32.discord_fm"
 
 logger = logging.getLogger("discord_fm").getChild(__name__)
 

@@ -1,8 +1,8 @@
-#define Name "Discord.fm"
+#define Name "fm.rpc"
 #define Version "#VERSION#"
-#define Publisher "androidWG"
-#define InfoURL "https://github.com/androidWG/Discord.fm"
-#define UpdatesURL "https://github.com/androidWG/Discord.fm/releases/latest"
+#define Publisher "andro-32"
+#define InfoURL "https://github.com/andro-32/fm.rpc"
+#define UpdatesURL "https://github.com/andro-32/fm.rpc/releases/latest"
 #define LocalPath "#REPO#"
 #define Suffix "#SUFFIX#"
 
@@ -23,7 +23,7 @@ DisableProgramGroupPage=yes
 CloseApplications=force
 AllowNoIcons=no
 OutputDir={#LocalPath}\dist
-OutputBaseFilename=discord.fm-setup-win64-#VERSION##SUFFIX#
+OutputBaseFilename=fm.rpc-setup-win64-#VERSION##SUFFIX#
 SetupIconFile={#LocalPath}\src\resources\settings.ico
 SolidCompression=yes
 UninstallDisplayName={#Name}
@@ -47,7 +47,7 @@ AppendDefaultGroupName=False
 DefaultGroupName={#Name}
 PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=commandline
-VersionInfoCompany=androidWG/Anna Rodrigues
+VersionInfoCompany=andro-32/Anna Rodrigues
 VersionInfoProductTextVersion={#Version}
 ArchitecturesInstallIn64BitMode=x64os
 ArchitecturesAllowed=x64compatible
@@ -63,13 +63,13 @@ Source: "{#LocalPath}\dist\discord_fm\*"; DestDir: "{app}"; Flags: ignoreversion
 Root: "HKCU"; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueName: "{#Name}"; Flags: deletevalue
 
 [Run]
-Filename: "{app}\discord_fm.exe"; Description: "Launch Discord.fm"; Flags: postinstall nowait
+Filename: "{app}\discord_fm.exe"; Description: "Launch fm.rpc"; Flags: postinstall nowait
 
 [ThirdParty]
 CompileLogFile={#LocalPath}\dist\#VERSION##SUFFIX#-installer.log
 
 [Icons]
-Name: "{userstartmenu}\Discord.fm"; Filename: "{app}\discord_fm.exe"; IconFilename: "{app}\discord_fm.exe"
+Name: "{userstartmenu}\fm.rpc"; Filename: "{app}\discord_fm.exe"; IconFilename: "{app}\discord_fm.exe"
 Name: "{userstartup}\{#Name}"; Filename: "{app}\discord_fm.exe"; Tasks: StartWithWindows
 
 [InstallDelete]
@@ -85,4 +85,4 @@ Type: filesandordirs; Name: "{userappdata}\{#Name}"
 Type: files; Name: "{userstartup}\{#Name}.lnk"
 
 [Tasks]
-Name: "StartWithWindows"; Description: "Start Discord.fm with Windows"
+Name: "StartWithWindows"; Description: "Start fm.rpc with Windows"

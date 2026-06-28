@@ -131,7 +131,7 @@ def basic_notification(title: str, message: str):
         plyer.notification.notify(
             title=title,
             message=message,
-            app_name="Discord.fm",
+            app_name="fm.rpc",
             app_icon=icon,
         )
 

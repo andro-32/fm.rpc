@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="setup debugging" type="PythonConfigurationType" factoryName="Python">
-    <module name="Discord.fm" />
+    <module name="fm.rpc" />
     <option name="ENV_FILES" value="" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />

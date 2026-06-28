@@ -3,7 +3,7 @@ name: Bug report
 about: Create a bug report with important debug information
 title: "[Bug] "
 labels: bug, triage
-assignees: androidWG
+assignees: andro-32
 
 ---
 
@@ -24,11 +24,11 @@ A clear and concise description of what you expected to happen.
 ## Versions & technical info
 **Logs**
 Follow these instructions to upload your log files:
-1. Right-click the Discord.fm tray icon and click "Open Settings"
+1. Right-click the fm.rpc tray icon and click "Open Settings"
 2. Click the "Open logs folder" button
-	If Discord.fm doesn't open at all, follow these instructions:
+	If fm.rpc doesn't open at all, follow these instructions:
 		1. Press Windows key + R
-		2. Copy and paste the following path: `%localappdata%\Discord.fm`
+		2. Copy and paste the following path: `%localappdata%\fm.rpc`
 		3. Continue following the instructions
 3. When the file explorer window opens, select all the files in the folder by pressing Ctrl + A
 4. Right click any of the files

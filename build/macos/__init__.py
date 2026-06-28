@@ -14,7 +14,7 @@ class DarwinBuildTool(build.base.PyInstallerBuildTool):
         command = [
             "appdmg",
             "build/macos/appdmg_specs.json",
-            f"dist/discord.fm-macos-{self.version.base_version}.dmg",
+            f"dist/fm.rpc-macos-{self.version.base_version}.dmg",
         ]
 
         appdmg = subprocess.Popen(

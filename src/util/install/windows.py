@@ -16,7 +16,7 @@ LINK_PATH = [
     "Start Menu",
     "Programs",
     "Startup",
-    "Discord.fm.lnk",
+    "fm.rpc.lnk",
 ]
 LINK_ABS_PATH = Path(os.path.expandvars("%appdata%"), *LINK_PATH)
 
@@ -32,7 +32,7 @@ class WindowsInstall(BaseInstall):
         try:
             access_key = winreg.OpenKey(access_registry, REGISTRY_PATH)
         except FileNotFoundError:
-            logger.warning("Discord.fm installation not found")
+            logger.warning("fm.rpc installation not found")
             return None
 
         exe_location = winreg.QueryValueEx(access_key, "DisplayIcon")[0]

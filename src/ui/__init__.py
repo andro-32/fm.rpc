@@ -32,7 +32,7 @@ class SettingsWindow(Tk):
         self.m = manager
 
         self.resizable(False, False)
-        self.wm_title("Discord.fm Settings")
+        self.wm_title("fm.rpc Settings")
         icon = Image("photo", file=resource_path("resources", "settings.png"))
         self.iconphoto(True, icon)
 

@@ -37,7 +37,7 @@ def get_newest_release_with_asset(manager) -> tuple[None, None] | tuple[Version,
 
 def download_asset(manager, asset: dict) -> Path:
     """Downloads a GitHub asset to the app's data folder and returns the full path of the file."""
-    headers = {"Accept": "application/octet-stream", "User-Agent": "Discord.fm"}
+    headers = {"Accept": "application/octet-stream", "User-Agent": "fm.rpc"}
 
     logger.info(f'Requesting asset "{asset["name"]}" from GitHub')
     handler = request_handler.RequestHandler(manager, "GitHub download")
@@ -88,11 +88,11 @@ def _match_asset(json_output) -> dict | None:
 def _get_release_json(manager) -> dict | None:
     headers = {
         "Accept": "application/vnd.github.v3+json",
-        "User-Agent": "Discord.fm",
+        "User-Agent": "fm.rpc",
         "X-GitHub-Api-Version": "2022-11-28",
     }
     handler = request_handler.RequestHandler(manager, "GitHub request")
-    base_url = "https://api.github.com/repos/AndroidWG/Discord.fm/releases"
+    base_url = "https://api.github.com/repos/andro-32/fm.rpc/releases"
     result = handler.attempt_request(
         requests.get,
         url=(

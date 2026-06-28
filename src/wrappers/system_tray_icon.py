@@ -113,5 +113,5 @@ class SystemTrayIcon:
 
         menu = self._create_menu()
 
-        icon = pystray.Icon("Discord.fm", icon=icon, title="Discord.fm", menu=menu)
+        icon = pystray.Icon("fm.rpc", icon=icon, title="fm.rpc", menu=menu)
         return icon

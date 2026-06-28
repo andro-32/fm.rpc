@@ -23,7 +23,7 @@ class WindowsBuildTool(build.base.PyInstallerBuildTool):
                 "#VERSION_TUPLE#",
                 f"{self.version.major}, {self.version.minor}, {self.version.micro}, 0",
             ),
-            ("#DESCRIPTION#", "Discord.fm Service Executable"),
+            ("#DESCRIPTION#", "fm.rpc Service Executable"),
             ("#FILENAME#", "discord_fm"),
         ]
 

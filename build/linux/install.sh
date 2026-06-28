@@ -8,7 +8,7 @@ if [ "$(dirname "$(realpath "$0")")" != "$(realpath "$PWD")" ]; then
 fi
 
 if [[ $(pidof discord_fm) ]]; then
-  echo "Waiting for Discord.fm to finish running"
+  echo "Waiting for fm.rpc to finish running"
   tail --pid="$(pidof discord_fm)" -f /dev/null
 fi
 
@@ -33,7 +33,7 @@ rm install.sh
 chmod +x uninstall.sh
 
 if [[ $* == *--self-start* ]]; then
-  echo "Install complete. Running Discord.fm"
+  echo "Install complete. Running fm.rpc"
   "$PREFIX"/bin/discord_fm &
 else
   echo "Install complete. Type 'discord_fm' to run."

@@ -7,7 +7,7 @@ from platform import system
 
 import util
 
-APP_ID = "net.androidwg.discord_fm"
+APP_ID = "net.andro-32.discord_fm"
 
 logger = logging.getLogger("discord_fm").getChild(__name__)
 

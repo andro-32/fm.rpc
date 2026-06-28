@@ -28,12 +28,12 @@ logger = logging.getLogger("discord_fm").getChild(__name__)
 
 
 class AppManager:
-    name = "discord.fm"
+    name = "fm.rpc"
     rpc_state = True
     second_user_notification_called = False
 
     def __init__(self):
-        self.settings = settings.Settings("Discord.fm")
+        self.settings = settings.Settings("fm.rpc")
         self.status = Status(Status.STARTUP)
         self.scrobble_status = ScrobbleStatus(ScrobbleStatus.FIRST_CHECK)
 
@@ -55,9 +55,9 @@ class AppManager:
             logger.warning("Running in non-frozen mode")
 
         if process.check_process_running(
-            "discord_fm", "discord.fm"
+            "discord_fm", "fm.rpc"
         ) and not util.arg_exists("--ignore-open"):
-            logger.error("Discord.fm is already running")
+            logger.error("fm.rpc is already running")
             self.close()
 
         logger.debug("Setting start with system")
@@ -223,7 +223,7 @@ class AppManager:
 
                     title = "Another user has Discord open"
                     message = (
-                        "Discord.fm will not update your Rich Presence or theirs. Please close the other "
+                        "fm.rpc will not update your Rich Presence or theirs. Please close the other "
                         "instance before scrobbling with this user. "
                     )
 
@@ -239,7 +239,7 @@ class AppManager:
 
         # Set app ID so Windows will show the correct icon on the taskbar
         if platform.system() == "Windows":
-            app_id = "com.androidwg.discordfm.ui"
+            app_id = "com.andro-32.fmrpc.ui"
             ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(app_id)
 
         window = ui.SettingsWindow(self)
