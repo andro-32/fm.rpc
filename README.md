@@ -14,15 +14,15 @@
 </p>
 
 <p align="center">
-   <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/downloads/androidWG/Discord.fm/latest/total?label=downloads&style=flat-square">
-    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/androidWG/Discord.fm/test-build.yml?style=flat-square">
-   <img src="https://img.shields.io/github/license/AndroidWG/Discord.fm?style=flat-square" alt="License: MIT">
+   <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/downloads/andro-32/fm.rpc/latest/total?label=downloads&style=flat-square">
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/andro-32/fm.rpc/test-build.yml?style=flat-square">
+   <img src="https://img.shields.io/github/license/andro-32/fm.rpc?style=flat-square" alt="License: MIT">
    <img src="https://img.shields.io/badge/using-pypresence-00bb88.svg?style=flat-square&logo=discord&logoWidth=20&logoColor=white" alt="Using pypresence package">
 </p>
 
 Multi-platform background service that shows what you're scrobbling on Last.fm to on Discord, with automatic updates, cover art image, support for Discord Canary and a UI for changing settings.
 
-Based on [Last.fm-Discord-Rich-Presence](https://github.com/Gust4Oliveira/Last.fm-Discord-Rich-Presence) by [Gust4Oliveira](https://github.com/Gust4Oliveira)
+An updated fork of [Discord.fm](https://github.com/AndroidWG/Discord.fm), which is based on [Last.fm-Discord-Rich-Presence](https://github.com/Gust4Oliveira/Last.fm-Discord-Rich-Presence) by [Gust4Oliveira](https://github.com/Gust4Oliveira)
 
 ## Install
 
@@ -39,7 +39,7 @@ Based on [Last.fm-Discord-Rich-Presence](https://github.com/Gust4Oliveira/Last.f
 
 ### Instructions
 
--   Download the [latest release](https://github.com/androidWG/Discord.fm/releases/latest)
+-   Download the [latest release](https://github.com/andro-32/fm.rpc/releases/latest)
 -   Run the installer
     -   `*setup.exe` on Windows, `install.sh` on Linux (generic)
 -   Wait a bit and the app's settings will open. Type in your Last.fm username and close the window.
@@ -47,7 +47,7 @@ Based on [Last.fm-Discord-Rich-Presence](https://github.com/Gust4Oliveira/Last.f
 
 ## Setting up dev environment or running as a Python script
 
-Discord.fm provides a setup script with some useful functions for devs. A full list of parameters can be viewed by running the command
+fm.rpc provides a setup script with some useful functions for devs. A full list of parameters can be viewed by running the command
 `python setup.py -h` or simply running the script with no flags or commands.
 
 The app can also be run unfrozen by running `python setup.py run`. Check requirements and full instructions below:
@@ -98,8 +98,8 @@ The app can also be run unfrozen by running `python setup.py run`. Check require
 After all requirements are met, clone the repo:
 
 ```commandline
-git clone https://github.com/androidWG/Discord.fm
-cd Discord.fm
+git clone https://github.com/andro-32/fm.rpc
+cd fm.rpc
 ```
 
 The setup script will set everything up when you before running any of its commands. You can set it up yourself manually too - the script checks for dependencies and other things, but ultimately setup is a single call for `uv sync` with arguments. Copy the command under the `sync` method in the `setup.py` file and run to install dependencies.
