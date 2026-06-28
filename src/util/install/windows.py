@@ -20,7 +20,7 @@ LINK_PATH = [
 ]
 LINK_ABS_PATH = Path(os.path.expandvars("%appdata%"), *LINK_PATH)
 
-logger = logging.getLogger("discord_fm").getChild(__name__)
+logger = logging.getLogger("fm_rpc").getChild(__name__)
 
 
 class WindowsInstall(BaseInstall):

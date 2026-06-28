@@ -18,27 +18,27 @@ class LinuxGenericBuildTool(build.base.PyInstallerBuildTool):
     def prepare_files(self):
         super().prepare_files()
 
-        self.temp_desktop_file = self._temp("discord_fm.desktop")
+        self.temp_desktop_file = self._temp("fm_rpc.desktop")
         desktop_tags = [("#VERSION#", self.version.base_version)]
         util.replace_instances(
-            "build/linux/discord_fm.desktop", desktop_tags, self.temp_desktop_file
+            "build/linux/fm_rpc.desktop", desktop_tags, self.temp_desktop_file
         )
 
     def build(self):
         super().build()
 
         # Remove unnecessary data to decrease bloat
-        shutil.rmtree("dist/discord_fm/share/icons", ignore_errors=True)
+        shutil.rmtree("dist/fm_rpc/share/icons", ignore_errors=True)
 
     def package(self):
-        source_dir = "dist/discord_fm"
+        source_dir = "dist/fm_rpc"
         filename = Path(f"dist/fm.rpc-generic-linux64-{self.version}.tar.gz")
 
         print("Copying additional files")
         shutil.copy("build/linux/install.sh", source_dir)
         shutil.copy("build/linux/uninstall.sh", source_dir)
         shutil.copy(self.temp_desktop_file, source_dir)
-        shutil.copy("build/linux/discord_fm.svg", source_dir)
+        shutil.copy("build/linux/fm_rpc.svg", source_dir)
 
         print("Creating tar.gz archive")
         filename.unlink(True)

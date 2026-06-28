@@ -6,7 +6,7 @@ from platform import system
 
 import process
 
-logger = logging.getLogger("discord_fm").getChild(__name__)
+logger = logging.getLogger("fm_rpc").getChild(__name__)
 
 
 # From https://stackoverflow.com/a/13790741/8286014

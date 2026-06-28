@@ -1,9 +1,9 @@
 {
-  "app-id": "net.andro-32.discord_fm",
+  "app-id": "net.andro-32.fm_rpc",
   "runtime": "org.gnome.Platform",
   "runtime-version": "45",
   "sdk": "org.gnome.Sdk",
-  "command": "discord_fm",
+  "command": "fm_rpc",
   "finish-args": [
     "--share=ipc",
     "--socket=x11",
@@ -77,14 +77,14 @@
       "name": "fm.rpc",
       "buildsystem": "simple",
       "build-commands": [
-        "mkdir -p /app/share/discord_fm",
+        "mkdir -p /app/share/fm_rpc",
         "mkdir -p /app/bin",
-        "cp -r * /app/share/discord_fm",
-        "ln -sf /app/share/discord_fm/discord_fm.sh /app/bin/discord_fm",
-        "install -Dm644 -t /app/share/metainfo net.andro-32.discord_fm.metainfo.xml",
-        "install -Dm644 -t /app/share/icons/hicolor/scalable/apps net.andro-32.discord_fm.svg",
+        "cp -r * /app/share/fm_rpc",
+        "ln -sf /app/share/fm_rpc/fm_rpc.sh /app/bin/fm_rpc",
+        "install -Dm644 -t /app/share/metainfo net.andro-32.fm_rpc.metainfo.xml",
+        "install -Dm644 -t /app/share/icons/hicolor/scalable/apps net.andro-32.fm_rpc.svg",
         "mkdir -p /app/share/applications",
-        "mv /app/share/discord_fm/net.andro-32.discord_fm.desktop /app/share/applications/"
+        "mv /app/share/fm_rpc/net.andro-32.fm_rpc.desktop /app/share/applications/"
       ],
       "sources": [
         {
@@ -93,19 +93,19 @@
         },
         {
           "type": "file",
-          "path": "net.andro-32.discord_fm.metainfo.xml"
+          "path": "net.andro-32.fm_rpc.metainfo.xml"
         },
         {
           "type": "file",
-          "path": "net.andro-32.discord_fm.desktop"
+          "path": "net.andro-32.fm_rpc.desktop"
         },
         {
           "type": "file",
-          "path": "net.andro-32.discord_fm.svg"
+          "path": "net.andro-32.fm_rpc.svg"
         },
         {
           "type": "file",
-          "path": "discord_fm.sh"
+          "path": "fm_rpc.sh"
         }
       ]
     }

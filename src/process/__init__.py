@@ -8,7 +8,7 @@ import psutil
 
 from . import executable_info
 
-logger = logging.getLogger("discord_fm").getChild(__name__)
+logger = logging.getLogger("fm_rpc").getChild(__name__)
 
 
 def get_external_process(

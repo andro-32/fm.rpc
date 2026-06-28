@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2023 Anna Rodrigues -->
 <component type="desktop-application">
-  <id>net.andro-32.discord_fm</id>
+  <id>net.andro-32.fm_rpc</id>
   <name>fm.rpc</name>
   <summary>Show what you're scrobbling on Discord</summary>
   <developer_name>Anna Rodrigues</developer_name>
@@ -23,6 +23,6 @@
       </description>
     </release>
   </releases>
-  <launchable type="desktop-id">net.andro-32.discord_fm.desktop</launchable>
+  <launchable type="desktop-id">net.andro-32.fm_rpc.desktop</launchable>
   <update_contact>annarodrigues.net</update_contact>
 </component>

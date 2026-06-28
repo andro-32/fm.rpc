@@ -9,7 +9,7 @@ from requests import exceptions, get
 
 from util.status import Status
 
-logger = logging.getLogger("discord_fm").getChild(__name__)
+logger = logging.getLogger("fm_rpc").getChild(__name__)
 
 
 def wait_for_internet():

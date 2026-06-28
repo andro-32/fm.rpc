@@ -7,7 +7,7 @@ if [ "$(dirname "$(realpath "$0")")" != "$(realpath "$PWD")" ]; then
   exit 1
 fi
 
-if [[ $(pidof discord_fm) ]]; then
+if [[ $(pidof fm_rpc) ]]; then
   echo "Waiting for fm.rpc to finish running"
   tail --pid="$PID" -f /dev/null
 fi
@@ -18,9 +18,9 @@ else
   PREFIX=~/.local
 fi
 
-rm -rf "$PREFIX"/share/discord_fm
-rm -f "$PREFIX"/bin/discord_fm
-rm -f "$PREFIX"/share/applications/discord_fm.desktop
-rm -f "$PREFIX"/share/icons/hicolor/scalable/apps/discord_fm.svg
+rm -rf "$PREFIX"/share/fm_rpc
+rm -f "$PREFIX"/bin/fm_rpc
+rm -f "$PREFIX"/share/applications/fm_rpc.desktop
+rm -f "$PREFIX"/share/icons/hicolor/scalable/apps/fm_rpc.svg
 
 echo "Uninstall complete."

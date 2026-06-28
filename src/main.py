@@ -15,7 +15,7 @@ if __name__ == "__main__":
     util.log_setup.setup_logging(manager)
     sys.excepthook = manager.handle_exception
 
-    logger = logging.getLogger("discord_fm").getChild(__name__)
+    logger = logging.getLogger("fm_rpc").getChild(__name__)
     logger.info(
         f' -------- fm.rpc version {version.get_version()} {"(debug mode)" if manager.get_debug() else ""} -------- '
     )
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     logger.info(f'Current working path: "{abspath(os.curdir)}"')
 
     if platform.system() == "Darwin" and process.check_process_running(
-        "discord_fm", "fm.rpc"
+        "fm_rpc", "fm.rpc"
     ):
         logger.info("fm.rpc is already running, opening settings...")
         manager.open_settings()

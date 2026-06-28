@@ -24,7 +24,7 @@ class WindowsBuildTool(build.base.PyInstallerBuildTool):
                 f"{self.version.major}, {self.version.minor}, {self.version.micro}, 0",
             ),
             ("#DESCRIPTION#", "fm.rpc Service Executable"),
-            ("#FILENAME#", "discord_fm"),
+            ("#FILENAME#", "fm_rpc"),
         ]
 
         util.replace_instances(

@@ -18,7 +18,7 @@ main_exe = EXE(
     main_pyz,
     main_a.scripts,
     exclude_binaries=True,
-    name="discord_fm",
+    name="fm_rpc",
     console=False,
     version=r"#VERSION_FILE#" if platform.system() == "Windows" else None,
     icon=r"#ICON_MAIN#",
@@ -31,14 +31,14 @@ coll = COLLECT(
     main_a.zipfiles,
     main_a.datas,
     upx=True,
-    name="discord_fm",
+    name="fm_rpc",
 )
 
 if platform.system() == "Darwin":
     app = BUNDLE(main_exe,
                  name="fm.rpc.app",
                  icon="build/macos/macos_icon.icns",
-                 bundle_identifier="net.andro-32.discord_fm",
+                 bundle_identifier="net.andro-32.fm_rpc",
                  version=r"#VERSION#",
                  info_plist={
                      "CFBundleVersion": r"#VERSION#",

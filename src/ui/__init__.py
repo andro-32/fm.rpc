@@ -10,7 +10,7 @@ import wrappers.last_fm_user
 from ui.repeat_timer import RepeatTimer
 from util import resource_path
 
-logger = logging.getLogger("discord_fm").getChild(__name__)
+logger = logging.getLogger("fm_rpc").getChild(__name__)
 
 SMALL_PAD = (4, 0, 4, 0)
 LABEL_PAD = (0, 0, 8, 0)

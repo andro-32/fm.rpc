@@ -22,8 +22,8 @@ SYSTEM_PACKAGES = [
 ]
 FLATPAK_CMD = ["pip3"]
 
-OUTPUT_PACKAGE = "discord_fm"
-OUTPUT_FILENAME = "discord_fm.yaml"
+OUTPUT_PACKAGE = "fm_rpc"
+OUTPUT_FILENAME = "fm_rpc.yaml"
 
 pip_command = [
     "python3",

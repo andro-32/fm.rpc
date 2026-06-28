@@ -27,7 +27,7 @@ OutputBaseFilename=fm.rpc-setup-win64-#VERSION##SUFFIX#
 SetupIconFile={#LocalPath}\src\resources\settings.ico
 SolidCompression=yes
 UninstallDisplayName={#Name}
-UninstallDisplayIcon={app}\discord_fm.exe
+UninstallDisplayIcon={app}\fm_rpc.exe
 MinVersion=6.1sp1
 WizardStyle=modern
 WizardSizePercent=100
@@ -57,26 +57,26 @@ DisableReadyMemo=True
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "{#LocalPath}\dist\discord_fm\*"; DestDir: "{app}"; Flags: ignoreversion createallsubdirs recursesubdirs
+Source: "{#LocalPath}\dist\fm_rpc\*"; DestDir: "{app}"; Flags: ignoreversion createallsubdirs recursesubdirs
 
 [Registry]
 Root: "HKCU"; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueName: "{#Name}"; Flags: deletevalue
 
 [Run]
-Filename: "{app}\discord_fm.exe"; Description: "Launch fm.rpc"; Flags: postinstall nowait
+Filename: "{app}\fm_rpc.exe"; Description: "Launch fm.rpc"; Flags: postinstall nowait
 
 [ThirdParty]
 CompileLogFile={#LocalPath}\dist\#VERSION##SUFFIX#-installer.log
 
 [Icons]
-Name: "{userstartmenu}\fm.rpc"; Filename: "{app}\discord_fm.exe"; IconFilename: "{app}\discord_fm.exe"
-Name: "{userstartup}\{#Name}"; Filename: "{app}\discord_fm.exe"; Tasks: StartWithWindows
+Name: "{userstartmenu}\fm.rpc"; Filename: "{app}\fm_rpc.exe"; IconFilename: "{app}\fm_rpc.exe"
+Name: "{userstartup}\{#Name}"; Filename: "{app}\fm_rpc.exe"; Tasks: StartWithWindows
 
 [InstallDelete]
 Type: filesandordirs; Name: "{app}"
 
 [UninstallRun]
-Filename: "taskkill.exe"; Parameters: "/T /IM discord_fm.exe /F"; Flags: waituntilterminated runhidden
+Filename: "taskkill.exe"; Parameters: "/T /IM fm_rpc.exe /F"; Flags: waituntilterminated runhidden
 
 [UninstallDelete]
 Type: filesandordirs; Name: "{app}"

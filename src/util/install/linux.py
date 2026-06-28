@@ -9,11 +9,11 @@ import util
 from util.install import BaseInstall
 
 SERVICE_ABS_PATH = (
-    Path("~/.config/systemd/user/discord_fm.service").expanduser().absolute()
+    Path("~/.config/systemd/user/fm_rpc.service").expanduser().absolute()
 )
-APP_ID = "net.andro-32.discord_fm"
+APP_ID = "net.andro-32.fm_rpc"
 
-logger = logging.getLogger("discord_fm").getChild(__name__)
+logger = logging.getLogger("fm_rpc").getChild(__name__)
 
 
 class LinuxInstall(BaseInstall):
@@ -25,7 +25,7 @@ class LinuxInstall(BaseInstall):
         else:
             install_path = Path("~/.local").expanduser()
 
-        exe_path = Path(install_path, "bin/discord_fm")
+        exe_path = Path(install_path, "bin/fm_rpc")
         return str(exe_path) if exe_path.is_file() else None
 
     def get_startup(self):
@@ -48,7 +48,7 @@ class LinuxInstall(BaseInstall):
             os.remove(SERVICE_ABS_PATH)
             return False
         elif not shortcut_exists and new_value:
-            service_path = util.resource_path("resources", "discord_fm.service")
+            service_path = util.resource_path("resources", "fm_rpc.service")
             try:
                 util.replace_instances(
                     service_path,

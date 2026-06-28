@@ -10,7 +10,7 @@ import util
 from util.scrobble_status import ScrobbleStatus
 from util.status import Status
 
-logger = logging.getLogger("discord_fm").getChild(__name__)
+logger = logging.getLogger("fm_rpc").getChild(__name__)
 
 
 class SystemTrayIcon:

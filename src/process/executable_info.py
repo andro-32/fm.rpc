@@ -4,7 +4,7 @@ import platform
 import sys
 from typing import List
 
-logger = logging.getLogger("discord_fm").getChild(__name__)
+logger = logging.getLogger("fm_rpc").getChild(__name__)
 
 
 def get_local_executable(name: str, script_name: str) -> List[str]:

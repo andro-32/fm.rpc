@@ -244,7 +244,7 @@ Hey everyone! Big changes in this version - we're getting closer to 1.0! Here's 
 Some nice changes on this version, getting a little closer to release! Here's all of them:
 
 -   Removed tray icon setting. Completely invisible background processes isn't that good of an idea for something like this.
--   Opening a second instance of the `discord_fm` executable will open the settings interface instead
+-   Opening a second instance of the `fm_rpc` executable will open the settings interface instead
     -   You can also use the CLI option `-o` to open settings from the main executable
 -   Discord.fm won't throw a fit when Discord isn't open. It will quietly wait until you open it to start doing its thing
 -   `process` and `install` utilities were much improved

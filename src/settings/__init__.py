@@ -5,7 +5,7 @@ import urllib.parse
 
 from settings.util import setup_app_data_dir, setup_logs_dir
 
-logger = logging.getLogger("discord_fm").getChild(__name__)
+logger = logging.getLogger("fm_rpc").getChild(__name__)
 
 
 class Settings:

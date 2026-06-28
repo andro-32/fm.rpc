@@ -24,7 +24,7 @@ from util.status import Status
 from wrappers import discord_rp
 from wrappers import system_tray_icon
 
-logger = logging.getLogger("discord_fm").getChild(__name__)
+logger = logging.getLogger("fm_rpc").getChild(__name__)
 
 
 class AppManager:
@@ -55,7 +55,7 @@ class AppManager:
             logger.warning("Running in non-frozen mode")
 
         if process.check_process_running(
-            "discord_fm", "fm.rpc"
+            "fm_rpc", "fm.rpc"
         ) and not util.arg_exists("--ignore-open"):
             logger.error("fm.rpc is already running")
             self.close()
@@ -257,7 +257,7 @@ class AppManager:
         logger.debug(f"Current status: {self.status}")
 
         if self.status != Status.KILL:
-            path = executable_info.get_local_executable("discord_fm", "main.py")
+            path = executable_info.get_local_executable("fm_rpc", "main.py")
             subprocess.Popen(path + ["--ignore-open"])
 
         self.close()

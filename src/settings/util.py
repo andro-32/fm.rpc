@@ -7,9 +7,9 @@ from platform import system
 
 import util
 
-APP_ID = "net.andro-32.discord_fm"
+APP_ID = "net.andro-32.fm_rpc"
 
-logger = logging.getLogger("discord_fm").getChild(__name__)
+logger = logging.getLogger("fm_rpc").getChild(__name__)
 
 
 def _make_dir(path: Path):

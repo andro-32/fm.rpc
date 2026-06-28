@@ -7,9 +7,9 @@ if [ "$(dirname "$(realpath "$0")")" != "$(realpath "$PWD")" ]; then
   exit 1
 fi
 
-if [[ $(pidof discord_fm) ]]; then
+if [[ $(pidof fm_rpc) ]]; then
   echo "Waiting for fm.rpc to finish running"
-  tail --pid="$(pidof discord_fm)" -f /dev/null
+  tail --pid="$(pidof fm_rpc)" -f /dev/null
 fi
 
 if [[ $* == *--all-users* ]]; then
@@ -18,23 +18,23 @@ else
   PREFIX=~/.local
 fi
 
-rm -rf "$PREFIX"/share/discord_fm "$PREFIX"/bin/discord_fm
-mkdir -p "$PREFIX"/share/discord_fm
-cp -av --no-preserve=owner,context -- * "$PREFIX"/share/discord_fm/
+rm -rf "$PREFIX"/share/fm_rpc "$PREFIX"/bin/fm_rpc
+mkdir -p "$PREFIX"/share/fm_rpc
+cp -av --no-preserve=owner,context -- * "$PREFIX"/share/fm_rpc/
 mkdir -p "$PREFIX"/bin
-ln -sf "$PREFIX"/share/discord_fm/discord_fm "$PREFIX"/bin/discord_fm
+ln -sf "$PREFIX"/share/fm_rpc/fm_rpc "$PREFIX"/bin/fm_rpc
 mkdir -p "$PREFIX"/share/icons/hicolor/scalable/apps
 mkdir -p "$PREFIX"/share/applications
-cd "$PREFIX"/share/discord_fm && (\
-mv -Z discord_fm.svg "$PREFIX"/share/icons/hicolor/scalable/apps/;\
-mv -Z discord_fm.desktop "$PREFIX"/share/applications/)
+cd "$PREFIX"/share/fm_rpc && (\
+mv -Z fm_rpc.svg "$PREFIX"/share/icons/hicolor/scalable/apps/;\
+mv -Z fm_rpc.desktop "$PREFIX"/share/applications/)
 
 rm install.sh
 chmod +x uninstall.sh
 
 if [[ $* == *--self-start* ]]; then
   echo "Install complete. Running fm.rpc"
-  "$PREFIX"/bin/discord_fm &
+  "$PREFIX"/bin/fm_rpc &
 else
-  echo "Install complete. Type 'discord_fm' to run."
+  echo "Install complete. Type 'fm_rpc' to run."
 fi

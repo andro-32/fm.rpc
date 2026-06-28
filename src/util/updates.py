@@ -8,7 +8,7 @@ from packaging.version import Version
 
 from util import request_handler
 
-logger = logging.getLogger("discord_fm").getChild(__name__)
+logger = logging.getLogger("fm_rpc").getChild(__name__)
 
 
 def get_newest_release_with_asset(manager) -> tuple[None, None] | tuple[Version, dict]:

@@ -151,7 +151,7 @@ def setup_logging(manager):
             },
         },
         "loggers": {
-            "discord_fm": {
+            "fm_rpc": {
                 "handlers": ["console", "file"],
                 "level": "DEBUG" if manager.get_debug() else "INFO",
                 "propagate": True,
