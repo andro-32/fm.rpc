@@ -1,7 +1,8 @@
 [project]
 name = "fm.rpc"
 authors = [
-  { name="Anna Rodrigues", email="me@annarodrigues.net" },
+  { name="andro32", email="me@andro32.dev" },
+  { name="Anna Rodrigues", email="me@annarodrigues.net" }
 ]
 version = "0.11.0"
 description = "Show what you're scrobbling on Discord at all times!"
